@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Sockets</title>
+	<script src="./socket.io.js"></script>
+	<script>
+		var socket = io();
+		function emitSocket(Socket){
+			 console.log(Socket);
+			switch(Socket){
+				case 1: socket.emit("1",1);break;
+				case 2: socket.emit("2",2);break;
+				case 3: socket.emit("3",3);break;
+				case 4: socket.emit("4",4);break;
+				case 5: socket.emit("5",5);break;
+				case 6: socket.emit("6",6);break;
+			}
+		}
+	</script>
+</head>
+<body>
+	<button onclick="emitSocket(1)">Socket 1</button>
+	<button onclick="emitSocket(2)">Socket 2</button>
+	<button onclick="emitSocket(3)">Socket 3</button>
+	<button onclick="emitSocket(4)">Socket 4</button>
+	<button onclick="emitSocket(5)">Socket 5</button>
+	<button onclick="emitSocket(6)">Socket 6</button>
+</body>
+</html>
